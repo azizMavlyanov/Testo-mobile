@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/multiAutoCompleteSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:hint="Search products"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewCart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewLg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ru"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewCart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageViewCart" />
+
+        <ImageView
+            android:id="@+id/imageViewCart"
+            android:layout_width="39dp"
+            android:layout_height="53dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/buy"
+            app:layout_constraintBottom_toBottomOf="@+id/multiAutoCompleteSearch"
+            app:layout_constraintEnd_toStartOf="@+id/textViewLg"
+            app:layout_constraintTop_toTopOf="@+id/multiAutoCompleteSearch" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
